@@ -1,25 +1,39 @@
-import React from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { createMuiTheme, ThemeProvider, useMediaQuery } from '@material-ui/core'
+import { useMemo } from 'react'
+import ScrollProvider from './common/ScrollProvider'
+import { Home } from './pages'
 
 function App() {
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
+  const theme = useMemo(
+    () =>
+      createMuiTheme({
+        palette: {
+          type: prefersDarkMode ? 'dark' : 'light',
+          primary: {
+            main: '#7EDD91',
+            dark: '#7EDD9150',
+          },
+          secondary: {
+            main: '#00000030',
+          },
+        },
+        overrides: {
+          MuiTypography: {
+            colorPrimary: {
+              color: 'white',
+            },
+          },
+        },
+      }),
+    [prefersDarkMode]
+  )
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <ScrollProvider>
+        <Home />
+      </ScrollProvider>
+    </ThemeProvider>
   )
 }
 

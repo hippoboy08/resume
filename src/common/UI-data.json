@@ -1,0 +1,128 @@
+{
+  "about": {
+    "bio": "In my perspectives, I am a passionate, enthusiastic programmer with a strong desire for knowledge and challenges. Actively involved with the latest technology and updates in the programming field as well as a fast learner who picks up new skills quickly. I'm self-motivated, versatiled and active, and also a friendly person to make friends with.",
+    "timelines": [
+      {
+        "title": "Sep 2020",
+        "subTitle": "BSc. ICT",
+        "description": "Turku UAS"
+      },
+      {
+        "title": "2017 - 2020",
+        "subTitle": "Web",
+        "description": "Student Assistant of Turku UAS."
+      },
+      {
+        "title": "Apr - Jul 2017",
+        "subTitle": "IoT",
+        "description": "Practical training in Sendai, Japan."
+      }
+    ]
+  },
+  "extraInfo": {
+    "title": "Some other aspects of me:",
+    "extraItems": [
+      {
+        "icon": "developer_mode",
+        "header": "Coding lover",
+        "desc": "The most important thing I love and want to stick with is programming. Couldn't stop thinking about digitalizing everything."
+      },
+      {
+        "icon": "group",
+        "header": "Teamwork Mindset",
+        "desc": "Even a hero needs support. Finishing task on my own is really cool, but learning from teammates is something even more."
+      },
+      {
+        "icon": "cloud_done",
+        "header": "Problem Solver",
+        "desc": "The curiousity makes me seek for the most effective way to solve any issue, this is also a good chance to challenge myself."
+      }
+    ]
+  },
+  "skills": [
+    { "name": "Angular", "point": 75 },
+    { "name": "React", "point": 88 },
+    { "name": "TypeScript", "point": 83 },
+    { "name": "HTML/SCSS/JSS", "point": 80 },
+    { "name": "Git", "point": 85 },
+    { "name": "Cloud Computing", "point": 69 }
+  ],
+  "projects": [
+    {
+      "name": "RioShop",
+      "position": "Front-end",
+      "thumbnail": "Rioshop.png",
+      "description": "A serverless Webshop with CMS built with MongoDB Atlas, React, and AWS.",
+      "techs": ["React", "TypeScript", "Material-UI", "AWS", "MongoDB"],
+      "demo": "https://rioshop.vn"
+    },
+    {
+      "name": "Pocket Social",
+      "position": "Front-end",
+      "thumbnail": "PocketSocial.png",
+      "description": "A serverless app that provides user a more effective way to share social information.",
+      "techs": ["React", "TypeScript", "Material-UI", "Firebase"],
+      "source": "https://github.com/hippoboy08/pocket-social",
+      "demo": "https://pocket-social.netlify.app"
+    },
+    {
+      "name": "Mini Geo Map",
+      "position": "Front-end",
+      "thumbnail": "MiniGeo.png",
+      "description": "A side project that uses OpenStreetMap open data API for rendering geo map.",
+      "techs": [
+        "React",
+        "TypeScript",
+        "Material-UI",
+        "JSS",
+        "OpenStreetMap",
+        "Leaflet"
+      ],
+      "source": "https://github.com/hippoboy08/mini-geolocation",
+      "demo": "https://minigeosearch.netlify.app/"
+    },
+    {
+      "name": "Food Recipes",
+      "position": "Front-end",
+      "thumbnail": "FoodRecipe.png",
+      "description": "A hobby created mostly with Angular, and Firebase real-time database.",
+      "techs": ["Angular", "TypeScript", "Bootstrap", "Firebase", "Rxjs"],
+      "source": "https://github.com/hippoboy08/FoodRecipes",
+      "demo": "https://foodrecipes.netlify.com/"
+    },
+    {
+      "name": "Reaction Test",
+      "position": "Front-end",
+      "thumbnail": "FastReaction.png",
+      "description": "A funny game created for playing around with Angular animation.",
+      "techs": ["Angular", "TypeScript", "HTML", "CSS"],
+      "source": "https://github.com/hippoboy08/fast-reaction",
+      "demo": "https://fast-reaction.netlify.com/"
+    },
+    {
+      "name": "Fincoda",
+      "position": "Full-stack",
+      "thumbnail": "Fincoda.png",
+      "description": "Innovation Barometer Assessment Tool developed mainly with Laravel framework, jQuery and MySQL.",
+      "techs": ["Laravel", "jQuery", "Bootstrap", "MySQL"],
+      "demo": "http://fincoda.dc.turkuamk.fi"
+    }
+  ],
+  "contacts":[
+    {
+      "icon": "email",
+      "title": "Email",
+      "value": "khoi.ht0181@gmail.com"
+    },
+    {
+      "icon": "phone_iphone",
+      "title": "Phone",
+      "value": "+84769630288"
+    },
+    {
+      "icon": "https",
+      "title": "Github",
+      "value": "github.com/hippoboy08"
+    }
+  ]
+}
