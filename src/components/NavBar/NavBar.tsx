@@ -19,7 +19,7 @@ const NavBar = ({ navItems = [] }: { navItems: NavItemProps[] }) => {
     setOpen(!open)
     if (title) {
       setActiveItem(title)
-      console.log('click')
+      // console.log('click')
     }
   }
 
@@ -29,7 +29,7 @@ const NavBar = ({ navItems = [] }: { navItems: NavItemProps[] }) => {
         position='fixed'
         className={classes.appBar}
         elevation={0}
-        style={{ transform: `translateY(${false ? '-100%' : 0})` }}
+        style={{ transform: `translateY(${trigger ? '-100%' : 0})` }}
       >
         <Hamburger isOpen={open} onClick={() => handleMenuClick()} />
         <Toolbar className={classes.toolBar}>

@@ -27,11 +27,8 @@ const useStyles = makeStyles(
       [theme.breakpoints.up('sm')]: {
         display: 'block',
       },
-      // '& .active':{
-      //   color: theme.palette.primary.main
-      // },
     },
   }),
-  { name: 'NavBar' }
+  { name: 'NavBar', index: 1 }
 )
 export default useStyles
