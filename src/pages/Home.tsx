@@ -17,7 +17,7 @@ const Home = () => {
     { title: 'About', icon: '' },
     { title: 'Skills', icon: '' },
     { title: 'Projects', icon: '' },
-    { title: 'Contact', icon: '' },
+    // { title: 'Contact', icon: '' },
   ]
   return (
     <>

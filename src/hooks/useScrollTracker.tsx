@@ -16,11 +16,14 @@ const useScrollTracker = ({ ref }: ScrollProps) => {
     const timeout = setTimeout(() => {
       if (isInViewPort) {
         // console.log('trigger', ref.current?.id)
-        if (currentSection === ref.current?.id || ref.current?.id === undefined)
+        if (currentSection === ref.current?.id || ref.current?.id === undefined) 
           return
         setCurrentSection(ref.current.id)
-      } else {
-        setCurrentSection('')
+      } 
+      else {
+        if(currentSection === ref.current?.id) {
+          setCurrentSection('')
+        }
       }
     }, 0)
     return () => clearTimeout(timeout)

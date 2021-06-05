@@ -85,7 +85,7 @@ interface ContactSectionProps {
 const ContactSection = ({ contacts }: ContactSectionProps) => {
   const classes = useStyles()
   return (
-    <div id='Contact' className={classes.root}>
+    <div className={classes.root}>
       <div className={classes.contacts}>
         {contacts.map((contact, ind) => (
           <a target='_blank' href={getClickAction(contact)} key={ind} className={classes.contactItem}>
