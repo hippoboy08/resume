@@ -3,11 +3,9 @@ import { useScroll } from '../common'
 import useIntersection from './useIntersection'
 
 interface ScrollProps {
-  ref: React.RefObject<HTMLElement>
 }
-const useScrollTracker = ({ ref }: ScrollProps) => {
-  const { isInViewPort } = useIntersection({
-    elementRef: ref,
+const useScrollTracker = () => {
+  const { isInViewPort, ref } = useIntersection({
     threshold: 0.4,
     stopOnceVisible: false,
   })
@@ -29,6 +27,6 @@ const useScrollTracker = ({ ref }: ScrollProps) => {
     return () => clearTimeout(timeout)
   }, [isInViewPort])
 
-  return { isInViewPort }
+  return { isInViewPort, ref }
 }
 export default useScrollTracker

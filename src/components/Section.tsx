@@ -1,5 +1,5 @@
 import { useTheme } from '@material-ui/core'
-import React, { Suspense } from 'react'
+import React, { RefObject, Suspense } from 'react'
 import { Title } from '.'
 import { useScrollTracker } from '../hooks'
 
@@ -9,10 +9,9 @@ interface SectionProps {
 }
 const Section = ({ title, children }: SectionProps) => {
   const theme = useTheme()
-  const ref = React.useRef(null)
-  useScrollTracker({ ref: ref })
+  const {ref} = useScrollTracker()
   return (
-    <div id={title} ref={ref}>
+    <div id={title} ref={ref as RefObject<HTMLDivElement>}>
       <Title>
         <span style={{ color: theme.palette.primary.main }}>{`>_// `}</span>
         {title}

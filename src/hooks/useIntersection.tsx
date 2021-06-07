@@ -1,14 +1,14 @@
-import { RefObject, useEffect, useRef, useState } from 'react'
+import React, { createRef, RefObject, useEffect, useRef, useState } from 'react'
 
 interface InputProps <T> extends IntersectionObserverInit{
-  elementRef: RefObject<T>,
+  // elementRef?: RefObject<T>,
   stopOnceVisible?: boolean
 }
 
 /** A hook to check if a component is in view port. 
  * The perfomance is optimized with the browser built-in IntersectionObserver API. */
 const useIntersection = <T extends HTMLElement>({
-  elementRef,
+  // elementRef,
   stopOnceVisible = true,
   root = null,
   rootMargin = '0%',
@@ -16,10 +16,12 @@ const useIntersection = <T extends HTMLElement>({
 } :InputProps<T>) => {
   const observer = useRef<IntersectionObserver | null>(null)
   const [entry, setEntry] = useState<IntersectionObserverEntry>()
+  const elementRef = createRef<T>()
 
   useEffect(() => {
     // Gets the DOME node
-    const ref = elementRef?.current
+    // const ref = elementRef?.current
+    const ref = elementRef.current
 
     /** Stops observing once the component is already visible */
     if(entry?.isIntersecting && stopOnceVisible) {
@@ -51,6 +53,6 @@ const useIntersection = <T extends HTMLElement>({
     }
   }, [elementRef, entry, stopOnceVisible, root, rootMargin, threshold])
 
-  return { isInViewPort: !!entry?.isIntersecting, entry }
+  return { ref:elementRef, isInViewPort: !!entry?.isIntersecting, entry }
 }
 export default useIntersection

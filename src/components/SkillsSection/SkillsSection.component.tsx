@@ -1,5 +1,7 @@
 import { Icon, Typography } from '@material-ui/core'
+import { RefObject } from 'react'
 import { Data } from '../../common'
+import { useIntersection } from '../../hooks'
 import { Skill } from '../Skill'
 import { useStyles } from './SkillsSection.styles'
 
@@ -9,14 +11,19 @@ interface SkillsSectionProps {
 }
 const SkillsSection = ({ extraInfo, skills }: SkillsSectionProps) => {
   const classes = useStyles()
+  const { ref: skillRef, isInViewPort: showSkills } =
+    useIntersection<HTMLDivElement>({
+      threshold: 0.5,
+    })
+
   return (
     <div className={classes.root}>
       {/* Programming skills */}
-      <div className={classes.skills}>
-        {/* <Typography variant='h2' style={{color: 'rgba(0,0,0,0.5)'}}><Icon fontSize='large'>code</Icon> Skills </Typography> */}
-        {skills.map((skill, ind) => {
-          return <Skill key={ind} {...skill} />
-        })}
+      <div className={classes.skills} ref={skillRef}>
+        {showSkills &&
+          skills.map((skill, ind) => {
+            return <Skill key={ind} {...skill} />
+          })}
       </div>
 
       {/* Extra Info */}
