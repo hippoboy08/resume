@@ -3,14 +3,19 @@
     "bio": "In my perspectives, I am a passionate, enthusiastic programmer with a strong desire for knowledge and challenges. Actively involved with the latest technology and updates in the programming field as well as a fast learner who picks up new skills quickly. I'm self-motivated, versatiled and active, and also a friendly person to make friends with.",
     "timelines": [
       {
+        "title": "Jun 2021 - Present",
+        "subTitle": "Front-end Engineer",
+        "description": "FPT Software"
+      },
+      {
         "title": "Sep 2020",
         "subTitle": "BSc. ICT",
         "description": "Turku UAS"
       },
       {
-        "title": "2017 - 2020",
-        "subTitle": "Web",
-        "description": "Student Assistant of Turku UAS."
+        "title": "Apr 2019 - Jul 2020",
+        "subTitle": "Full-stack Developer",
+        "description": "The FIRMA"
       },
       {
         "title": "Apr - Jul 2017",
